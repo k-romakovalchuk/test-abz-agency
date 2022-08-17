@@ -29,7 +29,6 @@ export const Get: React.FC<Props> = ({renewal}) => {
     let usersFromServer = await request(`users?page=${page}&count=6`).then(result => result.users);
     
     setUsers(prev => [...prev, ...usersFromServer]);
-    console.log(users);
   }
 
   return (

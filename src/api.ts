@@ -44,11 +44,9 @@ export const createUser = (
     body: formData,
   })
   .then(response => {
-    console.log(response);
     if (!response.ok) {
       throw `${response.status} - ${response.statusText}`;
     }
-    console.log(response);
     return response.json();
   })
 };
