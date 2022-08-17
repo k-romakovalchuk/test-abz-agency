@@ -1,0 +1,40 @@
+@import '../../styles/utils'; 
+.usersItem {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  flex-basis: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+  @include onTablet {
+    flex-basis: 40%;
+  }
+
+  @include onDesktop {
+    flex-basis: 26%;
+  }
+
+  &__block {
+    text-align: center;
+  }
+
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #fff;
+  }
+
+  &__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+}

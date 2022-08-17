@@ -1,0 +1,53 @@
+@import '../../styles/utils';
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../images/test.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-bottom: 140px;
+
+  @include onDesktop {
+    height: 650px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    max-width: 380px;
+  }
+
+  &__button {
+    width: 100px;
+    height: 34px;
+    background-color: #F4E041;
+    border-radius: 80px;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.87);
+    border: 0;
+    transition: transform 1s;
+
+    &:hover {
+      background-color: #FFE302;
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+}

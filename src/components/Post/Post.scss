@@ -1,0 +1,181 @@
+@import '../../styles/utils';
+.post {
+  margin-bottom: 100px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @include onMobile {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__radioButton {
+    cursor: pointer;
+  }
+
+  &__radioButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 11px;
+    margin-bottom: 50px;
+  }
+
+  &__upload {
+    display: flex;
+    height: 54px;
+    position: relative;
+    @include onMobile {
+      width: 100%;
+    }
+  }
+
+  &__uploadBlock1 {
+    padding: 14px 15px;
+    width: 83px;
+    box-sizing: border-box;
+    color: $c-black;
+    font-size: 16px;
+    line-height: 26px;
+    border: 1px solid $c-black;
+    border-radius: 4px 0px 0px 4px;
+
+    @include onMobile {
+      width: 25%;
+    }
+
+    &--error {
+      border-color: red;
+    }
+  }
+
+  &__file {
+    width: 380px;
+    height: 54px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    @include onMobile {
+      width: 100%;
+    }
+  }
+
+  &__uploadBlock2 {
+    padding: 14px 15px;
+    color: $c-gray;
+    width: 297px;
+    box-sizing: border-box;
+    border: 1px solid #D0CFCF;
+    border-radius: 0px 4px 4px 0px;
+
+    @include onMobile {
+      width: 75%;
+    }
+
+    &--error {
+      border-color: red;
+    }
+
+    &--select {
+      color: $c-black;
+    }
+  }
+
+  &__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subtitle {
+    font-size: 40px;
+    line-height: 40px;
+    color: $c-black;
+  }
+
+  &__image {
+    background-image: url(../../images/success.svg);
+    width: 328px;
+    height: 290px;
+  }
+
+
+  &__button {
+    margin: auto;
+    width: 100px;
+    height: 34px;
+    background-color: #F4E041;
+    border-radius: 80px;
+    border: 0;
+    margin-top: 50px;
+    transition: transform 1s;
+
+    &:hover {
+      background-color: #FFE302;
+      transform: scale(1.1);
+    }
+
+    &:disabled {
+      background-color: #B4B4B4;
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+
+  &__input {
+    width: 380px;
+    height: 54px;
+    box-sizing: border-box;
+    border: 1px solid #D0CFCF;
+    border-radius: 4px;
+    padding: 14px 16px;
+
+    @include onMobile {
+      width: 100%;
+    }
+
+    &::placeholder {
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $c-gray;
+    }
+
+    &--text, &--email {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__blockPhone {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 25px;
+  }
+
+  &__phone {
+    font-size: 12px;
+    line-height: 14px;
+    color: $c-gray;
+    margin-left: 15px;
+  }
+}
